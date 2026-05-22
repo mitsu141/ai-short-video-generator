@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>1分ニッポン雑学 ショート動画生成</title>
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <div class="badge">AI Short Video Generator</div>
+      <h1>1分ニッポン雑学<br />ショート動画生成</h1>
+      <p>
+        台本を入力すると、音声・字幕・縦型動画を自動生成します。
+      </p>
+    </section>
+
+    <section class="panel">
+      <label class="label" for="script">台本</label>
+
+      <textarea id="script" placeholder="ここに台本を入力してください">ヤマハって、なんで楽器もバイクも作ってるの？
+
+実はヤマハは、浜松でオルガン修理から始まった会社です。
+そこからピアノや音響機器に広がりました。
+さらに戦後、ものづくりの技術を活かしてバイク事業にも進出しました。
+つまりヤマハは、音を作る会社であり、モノづくりの会社でもあるんです。
+
+浜松の他の雑学も知りたい？コメントで教えて。</textarea>
+
+      <div class="settings">
+        <div>
+          <label class="label" for="style">画像スタイル</label>
+          <select id="style">
+            <option value="dark">ダーク系</option>
+            <option value="blue">ブルー系</option>
+            <option value="red">レッド系</option>
+            <option value="simple">シンプル</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="label" for="voice">音声</label>
+          <select id="voice">
+            <option value="gtts">無料TTS</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="generateButton">
+        動画を生成する
+      </button>
+
+      <div id="status" class="status">
+        台本を入力して、動画を生成してください。
+      </div>
+
+      <div id="downloadArea" class="download-area hidden">
+        <a id="downloadLink" class="download-button" href="#" download>
+          MP4をダウンロード
+        </a>
+      </div>
+    </section>
+
+    <section class="notice">
+      <h2>使い方</h2>
+      <ol>
+        <li>台本を入力します。</li>
+        <li>「動画を生成する」を押します。</li>
+        <li>生成が終わるとMP4のダウンロードボタンが出ます。</li>
+      </ol>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
